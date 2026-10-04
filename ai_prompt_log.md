@@ -1,0 +1,10 @@
+# Nhật ký Tương tác AI (AI Prompt Log - SmartFactory)
+
+- **Câu hỏi 1:** Covering Index (Chỉ mục bao phủ) trong MySQL hoạt động như thế nào và tại sao việc lạm dụng nó lại nguy hiểm trong hệ thống IoT ghi dữ liệu liên tục?
+  - *Giải đáp từ AI:* Covering Index chứa tất cả các cột mà câu truy vấn cần, giúp MySQL trả về kết quả ngay tại các nút lá của Index (hiển thị `Using index` ở cột `Extra`). Tuy nhiên, trong hệ thống IoT (như SmartFactory), dữ liệu cảm biến thay đổi liên tục và ghi mới mỗi giây. Nếu đưa quá nhiều cột vào Index, kích thước cây B-Tree phình to và mỗi lệnh `INSERT` sẽ phải gánh chịu **Write Penalty** nặng nề do phải sắp xếp lại toàn bộ các cột đó trên Index, gây nghẽn cổ chai.
+
+- **Câu hỏi 2:** MySQL phân bổ dữ liệu trên Clustered Index và Secondary Index khác nhau ra sao, và tại sao Lean Index lại tối ưu hơn cho bảng có dung lượng lớn?
+  - *Giải đáp từ AI:* Clustered Index (Primary Key) lưu trữ toàn bộ bản ghi dữ liệu thực tế ở nút lá. Secondary Index (Composite Index thông thường) chỉ lưu giá trị các cột được định nghĩa kèm theo giá trị khóa chính. Lean Index giữ số lượng cột tối thiểu giúp kích thước nút lá nhỏ gọn, vừa khít với kích thước trang dữ liệu (InnoDB Page size thường là 16KB), từ đó tăng tỷ lệ Cache Hit trong RAM và giảm thiểu thao tác đọc/ghi đĩa.
+
+- **Câu hỏi 3:** Cách tính toán dung lượng (Byte calculation) cho các kiểu dữ liệu phổ biến (`BIGINT`, `DATETIME`, `DECIMAL`) ảnh hưởng thế nào đến dung lượng của Index?
+  - *Giải đáp từ AI:* Mỗi kiểu dữ liệu chiếm một số byte cố định (`BIGINT` tốn 8 bytes, `DATETIME` tốn 5 bytes, `DECIMAL(5,2)` tốn từ 5-9 bytes). Khi gộp nhiều cột này vào một Composite Index, mỗi hàng trong bảng sẽ cộng thêm tổng số byte đó nhân với số lượng node trên cây B-Tree. Với hàng triệu bản ghi cảm biến, việc cắt giảm dù chỉ 2-3 cột không cần thiết khỏi Index sẽ giúp tiết kiệm hàng trăm Megabyte đến Gigabyte dung lượng lưu trữ thực tế trên ổ đĩa.
