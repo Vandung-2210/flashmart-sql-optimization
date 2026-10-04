@@ -2,35 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thực hành sử dụng CSS</title>
+    <title>Nhúng CSS vào trang HTML</title>
+    
+    <!-- Phần 3: Liên kết External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Phần 2: Internal CSS (Sử dụng thẻ <style>) -->
     <style>
-        h1 {
+        .internal-title {
             color: blue;
-            font-family: Tahoma;
-            font-size: 200%;
+            font-family: Arial, sans-serif;
         }
-
-        p {
-            color: red;
-            font-family: Arial;
-            font-size: 120%;
-            border: 1px solid grey;
-            padding: 10px;
-        }
-
-        #element1 {
-            color: blue;
+        .internal-text {
+            color: orange;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
 
-<h1>Đây là đề mục</h1>
+    <!-- Phần 1: Inline CSS (Sử dụng trực tiếp thuộc tính style trong thẻ HTML) -->
+    <h1 style="color: red; font-family: Tahoma;">Tiêu đề chính (Inline CSS)</h1>
+    <p style="color: purple; font-size: 18px;">Đây là đoạn văn bản được định dạng bằng Inline CSS.</p>
 
-<p>Đây là đoạn văn bản.</p>
-<p>Đây là đoạn văn bản.</p>
-<p>Đây là đoạn văn bản.</p>
-<p id="element1">Đoạn văn bản có thuộc tính id</p>
+    <hr>
+
+    <!-- Phần 2: Sử dụng Internal CSS -->
+    <h1 class="internal-title">Tiêu đề chính (Internal CSS)</h1>
+    <p class="internal-text">Đây là đoạn văn bản được định dạng bằng Internal CSS.</p>
+
+    <hr>
+
+    <!-- Phần 3: Sử dụng External CSS -->
+    <h1 style="color: darkcyan;">Tiêu đề chính (External CSS)</h1>
+    <p class="external-text">Đây là đoạn văn bản được định dạng bằng External CSS.</p>
 
 </body>
 </html>
