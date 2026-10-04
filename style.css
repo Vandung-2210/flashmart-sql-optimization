@@ -1,5 +1,7 @@
-/* Phần 3: External CSS */
+/* External CSS định nghĩa cho Phần 3 */
+.external-title {
+    color: darkcyan;
+}
 .external-text {
     color: green;
-    font-size: 18px;
 }
