@@ -1,102 +1,39 @@
-/* Định dạng tổng thể trang web */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.8;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #fdfbf7;
+body{
+    font-family: Arial;
 }
 
-/* Bước 7: Định dạng font chữ, màu sắc và căn giữa cho tiêu đề truyện */
-.story-title {
-    text-align: center;
-    font-family: 'Georgia', serif;
-    font-size: 32px;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-/* Định dạng ảnh truyện đặt ở đầu trang */
-.story-banner {
-    display: block;
-    margin: 0 auto 30px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Bước 8: Định dạng khối mục lục */
-.toc-container {
-    background-color: #f4f6f7;
-    border: 1px solid #dcdde1;
-    padding: 20px 30px;
-    border-radius: 6px;
-    margin-bottom: 40px;
-}
-
-.toc-container h3 {
-    margin-top: 0;
-    color: #34495e;
-}
-
-.toc-container ul {
-    list-style-type: none;
-    padding-left: 0;
+#menu, #menu ul, #menu li{
+    padding: 0;
     margin: 0;
 }
 
-.toc-container li {
-    margin-bottom: 10px;
+#menu li{
+    list-style: none;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    padding: 0 20px;
+    background-color: black;
+    line-height: 30px;
+    cursor: pointer;
 }
 
-/* Định dạng liên kết mục lục và hiệu ứng hover */
-.toc-container a {
-    color: #2980b9;
+#menu li a{
     text-decoration: none;
-    font-weight: 500;
+    color: white;
 }
 
-.toc-container a:hover {
-    color: #e74c3c;
-    text-decoration: underline;
+#menu li:hover{
+    background-color: red;
 }
 
-/* Định dạng nội dung phần truyện */
-.chapter-section {
-    margin-bottom: 50px;
+#menu ul ul{
+    position: absolute;
+    top: 0;
+    left: 140px;
+    visibility: hidden;
 }
 
-/* Bước 5: Thẻ <h5> cho từng tiêu đề mục lục truyện trong nội dung */
-.chapter-section h5 {
-    font-size: 20px;
-    color: #16a085;
-    border-bottom: 2px solid #1abc9c;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-/* Bước 9: Canh lề và giãn dòng cho các đoạn văn bản thân truyện */
-.chapter-section p {
-    text-align: justify;
-    text-indent: 30px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-/* Nút quay về mục lục */
-.back-to-top {
-    font-size: 13px;
-    color: #7f8c8d;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.back-to-top:hover {
-    color: #2c3e50;
+#menu ul li:hover ul{
+    visibility: visible;
 }
