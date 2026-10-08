@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Ngang Dropdown</title>
+    <title>Layout HTML5 & CSS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="menu">
+
+    <header>
+        <h1>Header (Tiêu đề trang)</h1>
+    </header>
+
+    <nav>
         <ul>
-            <li>
-                <a href="#">Sem 1</a>
-                <ul>
-                    <li><a href="#">Computing Fundamental</a></li>
-                    <li><a href="#">C Programming</a></li>
-                    <li><a href="#">Building Dynamic Website</a></li>
-                    <li><a href="#">MS Transact-SQL</a></li>
-                    <li><a href="#">Project</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Sem 2</a>
-                <ul>
-                    <li><a href="#">Cloud Computing</a></li>
-                    <li><a href="#">APJ - I</a></li>
-                    <li><a href="#">APJ - II</a></li>
-                    <li><a href="#">APJ - III</a></li>
-                    <li><a href="#">eProject</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Sem 3</a></li>
-            <li><a href="#">Sem 4</a></li>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Liên hệ</a></li>
         </ul>
+    </nav>
+
+    <div class="container">
+        <section class="main-content">
+            <h2>Khu vực nội dung chính (Section)</h2>
+            <article>
+                <h3>Bài viết 1 (Article)</h3>
+                <p>Nội dung chi tiết của bài viết thứ nhất mô tả về layout HTML5...</p>
+            </article>
+            <article>
+                <h3>Bài viết 2 (Article)</h3>
+                <p>Nội dung chi tiết của bài viết thứ hai...</p>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Cột bên (Aside)</h3>
+            <ul>
+                <li>Bài viết xem nhiều</li>
+                <li>Quảng cáo / Banner</li>
+                <li>Liên kết ngoài</li>
+            </ul>
+        </aside>
     </div>
+
+    <footer>
+        <p>© 2026 Bản quyền thuộc về Layout HTML5 Demo</p>
+    </footer>
+
 </body>
 </html>
