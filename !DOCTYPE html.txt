@@ -3,50 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout HTML5 & CSS</title>
+    <title>Giao diện giản lược Facebook</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Tiêu đề trang Web (Header)</h1>
+    <!-- 1. Fixed Header -->
+    <header class="navbar">
+        <div class="nav-left">
+            <span class="logo">facebook</span>
+            <input type="text" class="search-box" placeholder="Tìm kiếm trên Facebook...">
+        </div>
+        <div class="nav-center">
+            <button class="nav-tab active">Trang chủ</button>
+            <button class="nav-tab">Video</button>
+            <button class="nav-tab">Marketplace</button>
+            <button class="nav-tab">Nhóm</button>
+        </div>
+        <div class="nav-right">
+            <div class="profile-badge">Người dùng</div>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Dịch vụ</a></li>
-            <li><a href="#">Liên hệ</a></li>
-        </ul>
-    </nav>
-
+    <!-- 2. Main Wrapper gồm 3 cột -->
     <div class="main-container">
-        <section class="content-area">
-            <h2>Khu vực bài viết chính (Section)</h2>
-            <article>
-                <h3>Bài viết số 1 (Article)</h3>
-                <p>Nội dung chi tiết của bài viết thứ nhất sử dụng thẻ article trong HTML5.</p>
-            </article>
-            <article>
-                <h3>Bài viết số 2 (Article)</h3>
-                <p>Nội dung chi tiết của bài viết thứ hai minh họa bố cục trang web chuẩn ngữ nghĩa.</p>
-            </article>
-        </section>
-
-        <aside class="sidebar-area">
-            <h3>Thanh bên (Aside)</h3>
-            <ul>
-                <li>Tin nổi bật</li>
-                <li>Chuyên mục liên quan</li>
-                <li>Liên kết ngoài</li>
+        
+        <!-- Left Sidebar (Cố định danh mục bên trái) -->
+        <aside class="sidebar sidebar-left">
+            <ul class="menu-list">
+                <li class="menu-item active">👤 Trang cá nhân</li>
+                <li class="menu-item">👥 Bạn bè</li>
+                <li class="menu-item">⏰ Kỷ niệm</li>
+                <li class="menu-item">🔖 Đã lưu</li>
+                <li class="menu-item">🚩 Trang</li>
+                <li class="menu-item">📅 Sự kiện</li>
             </ul>
         </aside>
-    </div>
 
-    <footer>
-        <p>© 2026 - Bản quyền thuộc về Bố cục HTML5 & CSS</p>
-    </footer>
+        <!-- Main Content (Bảng tin cuộn ở giữa) -->
+        <main class="feed-content">
+            <!-- Box đăng trạng thái -->
+            <div class="card create-post">
+                <input type="text" placeholder="Bạn đang nghĩ gì thế?">
+                <div class="post-actions">
+                    <span>📹 Video trực tiếp</span>
+                    <span>🖼️ Ảnh/video</span>
+                    <span>😊 Cảm xúc</span>
+                </div>
+            </div>
+
+            <!-- Bài viết 1 -->
+            <article class="card post">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Nguyễn Văn A</strong>
+                        <div class="post-time">2 giờ trước · 🌐 Công khai</div>
+                    </div>
+                </div>
+                <div class="post-body">
+                    Hôm nay hoàn thành bài tập tạo giao diện Facebook giản lược với fixed header và sidebar!
+                </div>
+                <div class="post-footer">
+                    <button>👍 Thích</button>
+                    <button>💬 Bình luận</button>
+                    <button>↗️ Chia sẻ</button>
+                </div>
+            </article>
+
+            <!-- Bài viết 2 -->
+            <article class="card post">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Lập Trình Web</strong>
+                        <div class="post-time">5 giờ trước · 🌐 Công khai</div>
+                    </div>
+                </div>
+                <div class="post-body">
+                    Sử dụng thuộc tính <code>position: fixed</code> kết hợp với khoảng cách bù trừ <code>margin-top</code> hoặc <code>padding-top</code> là kỹ thuật cơ bản khi dựng thanh điều hướng cố định.
+                </div>
+                <div class="post-footer">
+                    <button>👍 Thích</button>
+                    <button>💬 Bình luận</button>
+                    <button>↗️ Chia sẻ</button>
+                </div>
+            </article>
+
+            <!-- Bài viết 3 -->
+            <article class="card post">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Frontend Developer</strong>
+                        <div class="post-time">1 ngày trước · 🌐 Công khai</div>
+                    </div>
+                </div>
+                <div class="post-body">
+                    Bố cục 3 cột kinh điển của các trang mạng xã hội: Sidebar trái chứa menu điều hướng, phần trung tâm hiển thị feed cuộn vô tận, Sidebar phải hiển thị danh bạ và tin nhắn nhanh.
+                </div>
+                <div class="post-footer">
+                    <button>👍 Thích</button>
+                    <button>💬 Bình luận</button>
+                    <button>↗️ Chia sẻ</button>
+                </div>
+            </article>
+        </main>
+
+        <!-- Right Sidebar (Cột danh bạ/tin nhắn bên phải) -->
+        <aside class="sidebar sidebar-right">
+            <h3>Người liên hệ</h3>
+            <ul class="contact-list">
+                <li class="contact-item"><span class="status-dot"></span> Trần Thị B</li>
+                <li class="contact-item"><span class="status-dot"></span> Lê Văn C</li>
+                <li class="contact-item"><span class="status-dot"></span> Hoàng Minh D</li>
+                <li class="contact-item"><span class="status-dot"></span> Phạm Thanh E</li>
+            </ul>
+        </aside>
+
+    </div>
 
 </body>
 </html>

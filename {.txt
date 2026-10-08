@@ -5,91 +5,249 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+    color: #050505;
 }
 
-header {
-    background-color: #1e3a8a;
-    color: #ffffff;
-    text-align: center;
-    padding: 24px;
-}
-
-nav {
-    background-color: #1e293b;
-}
-
-nav ul {
-    list-style: none;
+/* 1. FIXED HEADER Ở TRÊN CÙNG */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: #ffffff;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-nav ul li a {
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 20px;
-    font-weight: 500;
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-nav ul li a:hover {
-    background-color: #3b82f6;
+.logo {
+    color: #1877f2;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
 }
 
+.search-box {
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 16px;
+    outline: none;
+    width: 220px;
+}
+
+.nav-center {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-tab {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #65676b;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.nav-tab.active {
+    color: #1877f2;
+    border-bottom: 3px solid #1877f2;
+}
+
+.nav-tab:hover {
+    background-color: #f2f2f2;
+}
+
+.profile-badge {
+    background-color: #e4e6eb;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 2. KHUNG NỘI DUNG CHÍNH (ĐẨY XUỐNG DƯỚI HEADER 56PX) */
 .main-container {
+    margin-top: 56px;
     display: flex;
-    max-width: 1000px;
+    justify-content: space-between;
+    min-height: calc(100vh - 56px);
+}
+
+/* 3. SIDEBAR CỐ ĐỊNH (FIXED SIDEBAR) */
+.sidebar {
+    width: 280px;
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    padding: 16px 8px;
+    overflow-y: auto;
+}
+
+.sidebar-left {
+    left: 0;
+}
+
+.sidebar-right {
+    right: 0;
+    border-left: 1px solid #e4e6eb;
+}
+
+.menu-list, .contact-list {
+    list-style: none;
+}
+
+.menu-item, .contact-item {
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-item:hover, .contact-item:hover {
+    background-color: #e4e6eb;
+}
+
+.sidebar-right h3 {
+    font-size: 16px;
+    color: #65676b;
+    margin-bottom: 12px;
+    padding-left: 14px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #31a24c;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* 4. PHẦN BẢNG TIN Ở GIỮA (FEED CONTENT) */
+.feed-content {
+    flex: 1;
+    margin-left: 280px; /* Cách thanh sidebar trái */
+    margin-right: 280px; /* Cách thanh sidebar phải */
+    max-width: 680px;
     margin: 20px auto;
     padding: 0 16px;
-    gap: 20px;
 }
 
-.content-area {
-    flex: 3;
+.card {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 4px;
-    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    padding: 14px 16px;
 }
 
-.content-area article {
-    margin-top: 15px;
-    padding: 15px;
-    background-color: #f8fafc;
-    border-left: 4px solid #3b82f6;
+/* Box đăng bài */
+.create-post input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-bottom: 12px;
 }
 
-.sidebar-area {
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e4e6eb;
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #65676b;
+    cursor: pointer;
+}
+
+/* Bài viết */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #bcc0c4;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #65676b;
+}
+
+.post-body {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e4e6eb;
+    padding-top: 8px;
+}
+
+.post-footer button {
     flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
+    background: none;
+    border: none;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #65676b;
     border-radius: 4px;
-    border: 1px solid #e2e8f0;
+    cursor: pointer;
 }
 
-.sidebar-area ul {
-    margin-left: 20px;
-    margin-top: 10px;
+.post-footer button:hover {
+    background-color: #f2f2f2;
 }
 
-footer {
-    background-color: #1e293b;
-    color: #ffffff;
-    text-align: center;
-    padding: 16px;
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .main-container {
-        flex-direction: column;
+/* 5. RESPONSIVE KHI THU NHỎ MÀN HÌNH */
+@media (max-width: 1100px) {
+    .sidebar-right {
+        display: none; /* Ẩn sidebar phải nếu màn hình hẹp */
     }
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+    .feed-content {
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar-left {
+        display: none; /* Ẩn luôn sidebar trái trên màn hình nhỏ/mobile */
+    }
+    .feed-content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
     }
 }
