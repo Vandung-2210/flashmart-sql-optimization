@@ -3,118 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Simple Gallery</title>
-    <!-- Nhúng Bootstrap 5 CSS qua CDN -->
+    <title>Bootstrap Responsive Gallery</title>
+    <!-- Nhúng thư viện Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header / Banner tiêu đề -->
-    <header class="bg-dark text-white text-center py-4 mb-4">
-        <h1 class="h2 mb-1">Thư Viện Ảnh (Simple Gallery)</h1>
-        <p class="text-secondary mb-0">Thực hành hệ thống lưới Bootstrap Responsive Grid</p>
+    <header class="bg-primary text-white text-center py-4 mb-4">
+        <div class="container">
+            <h1 class="fw-bold">Thư Viện Ảnh Responsive</h1>
+            <p class="lead mb-0">Sử dụng Bootstrap Grid System: col-12, col-sm-6, col-lg-3</p>
+        </div>
     </header>
 
-    <!-- Main Container Gallery -->
-    <div class="container mb-5">
-        <!-- Lưới responsive: g-4 tạo khoảng cách giữa các cột -->
+    <!-- Gallery Container -->
+    <main class="container mb-5">
         <div class="row g-4">
 
-            <!-- Ảnh 1: col-12 (Mobile), col-sm-6 (Tablet), col-lg-3 (Desktop) -->
+            <!-- Ảnh 1 -->
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm gallery-card">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 1">
+                <div class="card h-100 shadow-sm border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" class="card-img-top gallery-img" alt="Ảnh thiên nhiên 1">
                     <div class="card-body">
-                        <h5 class="card-title fs-6 fw-bold">Thiên nhiên hoang dã</h5>
-                        <p class="card-text text-muted small">Cảnh hoàng hôn tuyệt đẹp trên núi.</p>
+                        <h5 class="card-title fw-bold">Thiên nhiên 1</h5>
+                        <p class="card-text text-muted small">Cảnh hoàng hôn rực rỡ trên dãy núi tuyết.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Ảnh 2 -->
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm gallery-card">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 2">
+                <div class="card h-100 shadow-sm border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600" class="card-img-top gallery-img" alt="Ảnh thiên nhiên 2">
                     <div class="card-body">
-                        <h5 class="card-title fs-6 fw-bold">Rừng nhiệt đới</h5>
-                        <p class="card-text text-muted small">Sương mù mờ ảo phủ quanh thung lũng.</p>
+                        <h5 class="card-title fw-bold">Thiên nhiên 2</h5>
+                        <p class="card-text text-muted small">Khu rừng nhiệt đới trong làn sương sớm.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Ảnh 3 -->
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm gallery-card">
-                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 3">
+                <div class="card h-100 shadow-sm border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600" class="card-img-top gallery-img" alt="Ảnh thiên nhiên 3">
                     <div class="card-body">
-                        <h5 class="card-title fs-6 fw-bold">Rừng cây lá kim</h5>
-                        <p class="card-text text-muted small">Tia nắng sớm xuyên qua rặng cây xanh mướt.</p>
+                        <h5 class="card-title fw-bold">Thiên nhiên 3</h5>
+                        <p class="card-text text-muted small">Tia nắng ban mai rọi qua tán lá rừng thông.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Ảnh 4 -->
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm gallery-card">
-                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 4">
+                <div class="card h-100 shadow-sm border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" class="card-img-top gallery-img" alt="Ảnh thiên nhiên 4">
                     <div class="card-body">
-                        <h5 class="card-title fs-6 fw-bold">Hồ trên núi</h5>
-                        <p class="card-text text-muted small">Mặt nước trong xanh phẳng lặng như gương.</p>
+                        <h5 class="card-title fw-bold">Thiên nhiên 4</h5>
+                        <p class="card-text text-muted small">Hồ nước trong xanh phản chiếu đỉnh núi cao.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Ảnh 5 -->
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm gallery-card">
-                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 5">
+                <div class="card h-100 shadow-sm border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600" class="card-img-top gallery-img" alt="Ảnh thiên nhiên 5">
                     <div class="card-body">
-                        <h5 class="card-title fs-6 fw-bold">Đồng cỏ xanh</h5>
-                        <p class="card-text text-muted small">Đồi thảo nguyên bát ngát dưới ánh nắng.</p>
+                        <h5 class="card-title fw-bold">Thiên nhiên 5</h5>
+                        <p class="card-text text-muted small">Đồi thảo nguyên xanh mướt trải dài vô tận.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Ảnh 6 -->
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm gallery-card">
-                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 6">
+                <div class="card h-100 shadow-sm border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600" class="card-img-top gallery-img" alt="Ảnh thiên nhiên 6">
                     <div class="card-body">
-                        <h5 class="card-title fs-6 fw-bold">Thung lũng đá</h5>
-                        <p class="card-text text-muted small">Cung đường mòn khám phá đỉnh núi cao.</p>
+                        <h5 class="card-title fw-bold">Thiên nhiên 6</h5>
+                        <p class="card-text text-muted small">Vách núi đá hùng vĩ giữa không gian rộng lớn.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Ảnh 7 -->
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm gallery-card">
-                    <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 7">
+                <div class="card h-100 shadow-sm border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600" class="card-img-top gallery-img" alt="Ảnh thiên nhiên 7">
                     <div class="card-body">
-                        <h5 class="card-title fs-6 fw-bold">Ánh nắng rừng già</h5>
-                        <p class="card-text text-muted small">Vẻ đẹp tĩnh lặng giữa lòng thiên nhiên hoang sơ.</p>
+                        <h5 class="card-title fw-bold">Thiên nhiên 7</h5>
+                        <p class="card-text text-muted small">Tia sáng xuyên qua tán lá cây đại thụ.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Ảnh 8 -->
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm gallery-card">
-                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 8">
+                <div class="card h-100 shadow-sm border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=600" class="card-img-top gallery-img" alt="Ảnh thiên nhiên 8">
                     <div class="card-body">
-                        <h5 class="card-title fs-6 fw-bold">Đỉnh núi tuyết</h5>
-                        <p class="card-text text-muted small">Vùng non cao hùng vĩ chạm mây trời.</p>
+                        <h5 class="card-title fw-bold">Thiên nhiên 8</h5>
+                        <p class="card-text text-muted small">Rặng núi hùng vĩ nổi bật trên nền trời xanh.</p>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
+    </main>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p class="mb-0 small">&copy; 2026 Bootstrap Gallery - Bài tập thực hành lưới RWD</p>
+        <p class="mb-0 small">&copy; 2026 Bài tập Bootstrap Gallery</p>
     </footer>
 
     <!-- Bootstrap Bundle JS -->
