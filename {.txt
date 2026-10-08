@@ -7,15 +7,15 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: #f4f6f8;
-    color: #333333;
+    background-color: #f1f5f9;
+    color: #1e293b;
 }
 
-.wrapper {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* 1. Header */
@@ -26,7 +26,7 @@ body {
     padding: 30px 20px;
 }
 
-/* 2. Menu Navigation */
+/* 2. Thanh điều hướng Menu */
 .navbar {
     background-color: #2563eb;
     display: flex;
@@ -45,16 +45,16 @@ body {
     background-color: #1d4ed8;
 }
 
-/* 3. Thân trang - Mặc định trên Desktop hiển thị 2 cột */
+/* 3. Bố cục thân trang 2 cột trên máy tính */
 .main-body {
     display: flex;
     gap: 20px;
     padding: 20px;
-    min-height: 450px;
+    min-height: 400px;
 }
 
 .content {
-    flex: 3; /* Chiếm 3 phần chiều rộng */
+    flex: 3;
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #e2e8f0;
@@ -62,8 +62,8 @@ body {
 }
 
 .content h2 {
-    margin-bottom: 15px;
     color: #1e3a8a;
+    margin-bottom: 12px;
 }
 
 .content p {
@@ -71,7 +71,7 @@ body {
 }
 
 .sidebar {
-    flex: 1; /* Chiếm 1 phần chiều rộng */
+    flex: 1;
     background-color: #f8fafc;
     padding: 20px;
     border: 1px solid #e2e8f0;
@@ -79,11 +79,11 @@ body {
 }
 
 .sidebar h3 {
-    margin-bottom: 15px;
     color: #1e3a8a;
+    margin-bottom: 12px;
 }
 
-.sidebar-item {
+.sidebar-box {
     background-color: #ffffff;
     padding: 10px;
     margin-bottom: 10px;
@@ -99,16 +99,16 @@ body {
     padding: 20px;
 }
 
-/* 5. RESPONSIVE WEB DESIGN (RWD) CHO TABLET VÀ MOBILE */
+/* 5. TIÊU CHÍ RESPONSIVE (RWD) - MEDIA QUERIES */
 @media screen and (max-width: 768px) {
-    /* Đổi bố cục thân trang từ hàng ngang sang cột dọc */
+    /* Đổi bố cục 2 cột ngang thành 1 cột dọc */
     .main-body {
         flex-direction: column;
         padding: 12px;
         gap: 16px;
     }
 
-    /* Menu xếp chồng từng dòng trên điện thoại */
+    /* Menu co dãn xếp dọc trên điện thoại */
     .navbar {
         flex-direction: column;
     }

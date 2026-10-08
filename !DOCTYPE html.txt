@@ -8,45 +8,42 @@
 </head>
 <body>
 
-    <div class="wrapper">
-        <!-- 1. Header -->
-        <div class="header">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
             <h1>Header</h1>
-        </div>
+        </header>
 
-        <!-- 2. Menu Điều Hướng -->
-        <div class="navbar">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
             <a href="#">Trang chủ</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Sản phẩm</a>
             <a href="#">Dịch vụ</a>
             <a href="#">Liên hệ</a>
-        </div>
+        </nav>
 
-        <!-- 3. Khu vực thân trang (gồm Content và Sidebar) -->
+        <!-- Main Body: Gồm Nội dung chính và Cột bên -->
         <div class="main-body">
-            <!-- Cột nội dung chính -->
-            <div class="content">
-                <h2>Nội Dung Chính (Content)</h2>
-                <p>Bố cục trang web được thiết kế theo tiêu chuẩn Responsive Web Design (RWD) bằng cách kết hợp thuộc tính CSS Flexbox và Media Queries.</p>
-                <p>Khi hiển thị trên màn hình máy tính (Desktop/Laptop), khu vực thân trang sẽ chia thành 2 cột: Cột nội dung chính chiếm không gian lớn và Cột bên (Sidebar) chiếm không gian phụ.</p>
-                <p>Khi xem trên điện thoại hoặc thu nhỏ trình duyệt xuống dưới 768px, toàn bộ bố cục sẽ tự động chuyển đổi sang dạng 1 cột dọc giúp người dùng dễ dàng thao tác vuốt cuộn.</p>
-            </div>
+            <main class="content">
+                <h2>Nội Dung Chính</h2>
+                <p>Trang web được thiết kế áp dụng kỹ thuật Responsive Web Design (RWD) bằng CSS Flexbox và Media Queries.</p>
+                <p>Trên màn hình máy tính (Desktop), trang web hiển thị bố cục đa cột với thanh bên (Sidebar) đặt cạnh nội dung chính.</p>
+                <p>Khi co giãn màn hình xuống kích thước thiết bị di động (Mobile), toàn bộ bố cục tự động chuyển thành dạng một cột dọc duy nhất.</p>
+            </main>
 
-            <!-- Cột bên Sidebar -->
-            <div class="sidebar">
-                <h3>Thanh Bên (Sidebar)</h3>
-                <div class="sidebar-item">Mục nổi bật 1</div>
-                <div class="sidebar-item">Mục nổi bật 2</div>
-                <div class="sidebar-item">Quảng cáo / Banner</div>
-                <div class="sidebar-item">Thông tin bổ sung</div>
-            </div>
+            <aside class="sidebar">
+                <h3>Thanh Bên</h3>
+                <div class="sidebar-box">Mục bổ sung 1</div>
+                <div class="sidebar-box">Mục bổ sung 2</div>
+                <div class="sidebar-box">Liên kết ngoài</div>
+            </aside>
         </div>
 
-        <!-- 4. Footer -->
-        <div class="footer">
-            <p>Footer © 2026 - Thiết kế giao diện với RWD</p>
-        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Footer © 2026 - Thiết kế giao diện chuẩn RWD</p>
+        </footer>
     </div>
 
 </body>
