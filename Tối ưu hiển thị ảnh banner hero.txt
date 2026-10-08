@@ -1,0 +1,37 @@
+/* Tối ưu hiển thị ảnh banner hero */
+.hero-banner-item {
+    height: 520px;
+    background-color: #111827;
+}
+
+.hero-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Thẻ sản phẩm */
+.surface-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+}
+
+.surface-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-thumb {
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Hộp danh mục */
+.category-box {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.category-box:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-2px);
+}
