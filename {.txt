@@ -1,124 +1,123 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoạt Hình Trực Tuyến Dành Cho Trẻ Em</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f1f5f9;
-    color: #1e293b;
-}
+    <!-- 1. Header (Cố định ở trên cùng) -->
+    <header class="header">
+        <div class="logo">
+            🎬 <span>KIDS CARTOON</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
+            <button>Tìm kiếm</button>
+        </div>
+    </header>
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
+    <!-- 2. Head-link (Thanh menu điều hướng trang) -->
+    <nav class="head-link">
+        <ul>
+            <li><a href="#" class="active">Trang chủ</a></li>
+            <li><a href="#">Mới cập nhật</a></li>
+            <li><a href="#">Xem nhiều nhất</a></li>
+            <li><a href="#">Thuyết minh Tiếng Việt</a></li>
+            <li><a href="#">Phim ngắn giáo dục</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
 
-/* 1. Header */
-.header {
-    background-color: #1e3a8a;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-}
+    <!-- 3. Khu vực Content chính (gồm Left và Right Content) -->
+    <div class="main-container">
+        
+        <!-- Left Content: Danh sách các video có sẵn -->
+        <aside class="left-content">
+            <h3 class="sidebar-title">Danh Sách Phim</h3>
+            <ul class="video-list">
+                <li class="video-item active">
+                    <span class="video-icon">▶</span>
+                    <div>
+                        <strong>Tom & Jerry: Mèo và Chuột</strong>
+                        <p class="tag">Thuyết minh · HD</p>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <span class="video-icon">▶</span>
+                    <div>
+                        <strong>Doraemon: Chú Mèo Máy Đến Từ Tương Lai</strong>
+                        <p class="tag">Lồng tiếng · FullHD</p>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <span class="video-icon">▶</span>
+                    <div>
+                        <strong>Thám Tử Lừng Danh Conan</strong>
+                        <p class="tag">Thuyết minh · HD</p>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <span class="video-icon">▶</span>
+                    <div>
+                        <strong>Bài học cuộc sống: Rùa và Thỏ</strong>
+                        <p class="tag">Giáo dục trẻ em</p>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <span class="video-icon">▶</span>
+                    <div>
+                        <strong>Gia đình Heo Peppa Pig</strong>
+                        <p class="tag">Tiếng Việt · 1080p</p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
 
-/* 2. Thanh điều hướng Menu */
-.navbar {
-    background-color: #2563eb;
-    display: flex;
-    flex-wrap: wrap;
-}
+        <!-- Right Content: Trình phát video được chọn -->
+        <main class="right-content">
+            <section class="player-wrapper">
+                <!-- Video Player sử dụng thẻ HTML5 <video> -->
+                <h2 class="movie-title">Tom & Jerry - Tập 1: Trận Chiến Phô Mai</h2>
+                <div class="video-box">
+                    <video controls poster="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="badge">Full HD 1080p</span>
+                    <span class="badge">Audio Việt - Thuyết minh</span>
+                    <span class="badge">Không quảng cáo</span>
+                    <p class="description">
+                        Bộ phim hoạt hình vui nhộn mang tính giải trí lành mạnh, an toàn và giúp phát triển tư duy sáng tạo cho thiếu nhi. Tốc độ truyền tải nhanh chóng từ máy chủ chuyên biệt.
+                    </p>
+                </div>
+            </section>
 
-.navbar a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-    font-weight: 600;
-}
+            <!-- Video nhúng từ Youtube sử dụng <iframe> theo yêu cầu bài tập -->
+            <section class="youtube-section">
+                <h3 class="sub-title">Xem Thêm Trên Kênh Youtube Chọn Lọc</h3>
+                <div class="iframe-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+        </main>
 
-.navbar a:hover {
-    background-color: #1d4ed8;
-}
+    </div>
 
-/* 3. Bố cục thân trang 2 cột trên máy tính */
-.main-body {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    min-height: 400px;
-}
+    <!-- 4. Footer (Thông tin bản quyền) -->
+    <footer class="footer">
+        <p>© 2026 Bản quyền thuộc về Trang Web Hoạt Hình Trực Tuyến An Toàn Cho Trẻ Em.</p>
+        <p>Cam kết 100% nội dung lành mạnh, chuẩn HD - Không quảng cáo độc hại.</p>
+    </footer>
 
-.content {
-    flex: 3;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 4px;
-}
-
-.content h2 {
-    color: #1e3a8a;
-    margin-bottom: 12px;
-}
-
-.content p {
-    margin-bottom: 12px;
-}
-
-.sidebar {
-    flex: 1;
-    background-color: #f8fafc;
-    padding: 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 4px;
-}
-
-.sidebar h3 {
-    color: #1e3a8a;
-    margin-bottom: 12px;
-}
-
-.sidebar-box {
-    background-color: #ffffff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px dashed #cbd5e1;
-    border-radius: 4px;
-}
-
-/* 4. Footer */
-.footer {
-    background-color: #0f172a;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* 5. TIÊU CHÍ RESPONSIVE (RWD) - MEDIA QUERIES */
-@media screen and (max-width: 768px) {
-    /* Đổi bố cục 2 cột ngang thành 1 cột dọc */
-    .main-body {
-        flex-direction: column;
-        padding: 12px;
-        gap: 16px;
-    }
-
-    /* Menu co dãn xếp dọc trên điện thoại */
-    .navbar {
-        flex-direction: column;
-    }
-
-    .navbar a {
-        text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .header {
-        padding: 20px 10px;
-    }
-}
+</body>
+</html>
