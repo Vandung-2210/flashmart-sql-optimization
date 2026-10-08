@@ -3,121 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoạt Hình Trực Tuyến Dành Cho Trẻ Em</title>
+    <title>Bootstrap Simple Gallery</title>
+    <!-- Nhúng Bootstrap 5 CSS qua CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- 1. Header (Cố định ở trên cùng) -->
-    <header class="header">
-        <div class="logo">
-            🎬 <span>KIDS CARTOON</span>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
-            <button>Tìm kiếm</button>
-        </div>
+    <!-- Header / Banner tiêu đề -->
+    <header class="bg-dark text-white text-center py-4 mb-4">
+        <h1 class="h2 mb-1">Thư Viện Ảnh (Simple Gallery)</h1>
+        <p class="text-secondary mb-0">Thực hành hệ thống lưới Bootstrap Responsive Grid</p>
     </header>
 
-    <!-- 2. Head-link (Thanh menu điều hướng trang) -->
-    <nav class="head-link">
-        <ul>
-            <li><a href="#" class="active">Trang chủ</a></li>
-            <li><a href="#">Mới cập nhật</a></li>
-            <li><a href="#">Xem nhiều nhất</a></li>
-            <li><a href="#">Thuyết minh Tiếng Việt</a></li>
-            <li><a href="#">Phim ngắn giáo dục</a></li>
-            <li><a href="#">Liên hệ</a></li>
-        </ul>
-    </nav>
+    <!-- Main Container Gallery -->
+    <div class="container mb-5">
+        <!-- Lưới responsive: g-4 tạo khoảng cách giữa các cột -->
+        <div class="row g-4">
 
-    <!-- 3. Khu vực Content chính (gồm Left và Right Content) -->
-    <div class="main-container">
-        
-        <!-- Left Content: Danh sách các video có sẵn -->
-        <aside class="left-content">
-            <h3 class="sidebar-title">Danh Sách Phim</h3>
-            <ul class="video-list">
-                <li class="video-item active">
-                    <span class="video-icon">▶</span>
-                    <div>
-                        <strong>Tom & Jerry: Mèo và Chuột</strong>
-                        <p class="tag">Thuyết minh · HD</p>
+            <!-- Ảnh 1: col-12 (Mobile), col-sm-6 (Tablet), col-lg-3 (Desktop) -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 1">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Thiên nhiên hoang dã</h5>
+                        <p class="card-text text-muted small">Cảnh hoàng hôn tuyệt đẹp trên núi.</p>
                     </div>
-                </li>
-                <li class="video-item">
-                    <span class="video-icon">▶</span>
-                    <div>
-                        <strong>Doraemon: Chú Mèo Máy Đến Từ Tương Lai</strong>
-                        <p class="tag">Lồng tiếng · FullHD</p>
-                    </div>
-                </li>
-                <li class="video-item">
-                    <span class="video-icon">▶</span>
-                    <div>
-                        <strong>Thám Tử Lừng Danh Conan</strong>
-                        <p class="tag">Thuyết minh · HD</p>
-                    </div>
-                </li>
-                <li class="video-item">
-                    <span class="video-icon">▶</span>
-                    <div>
-                        <strong>Bài học cuộc sống: Rùa và Thỏ</strong>
-                        <p class="tag">Giáo dục trẻ em</p>
-                    </div>
-                </li>
-                <li class="video-item">
-                    <span class="video-icon">▶</span>
-                    <div>
-                        <strong>Gia đình Heo Peppa Pig</strong>
-                        <p class="tag">Tiếng Việt · 1080p</p>
-                    </div>
-                </li>
-            </ul>
-        </aside>
-
-        <!-- Right Content: Trình phát video được chọn -->
-        <main class="right-content">
-            <section class="player-wrapper">
-                <!-- Video Player sử dụng thẻ HTML5 <video> -->
-                <h2 class="movie-title">Tom & Jerry - Tập 1: Trận Chiến Phô Mai</h2>
-                <div class="video-box">
-                    <video controls poster="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800">
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
-                    </video>
                 </div>
-                <div class="video-info">
-                    <span class="badge">Full HD 1080p</span>
-                    <span class="badge">Audio Việt - Thuyết minh</span>
-                    <span class="badge">Không quảng cáo</span>
-                    <p class="description">
-                        Bộ phim hoạt hình vui nhộn mang tính giải trí lành mạnh, an toàn và giúp phát triển tư duy sáng tạo cho thiếu nhi. Tốc độ truyền tải nhanh chóng từ máy chủ chuyên biệt.
-                    </p>
-                </div>
-            </section>
+            </div>
 
-            <!-- Video nhúng từ Youtube sử dụng <iframe> theo yêu cầu bài tập -->
-            <section class="youtube-section">
-                <h3 class="sub-title">Xem Thêm Trên Kênh Youtube Chọn Lọc</h3>
-                <div class="iframe-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                        title="YouTube video player" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+            <!-- Ảnh 2 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 2">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Rừng nhiệt đới</h5>
+                        <p class="card-text text-muted small">Sương mù mờ ảo phủ quanh thung lũng.</p>
+                    </div>
                 </div>
-            </section>
-        </main>
+            </div>
 
+            <!-- Ảnh 3 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 3">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Rừng cây lá kim</h5>
+                        <p class="card-text text-muted small">Tia nắng sớm xuyên qua rặng cây xanh mướt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 4 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 4">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Hồ trên núi</h5>
+                        <p class="card-text text-muted small">Mặt nước trong xanh phẳng lặng như gương.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 5 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 5">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Đồng cỏ xanh</h5>
+                        <p class="card-text text-muted small">Đồi thảo nguyên bát ngát dưới ánh nắng.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 6 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 6">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Thung lũng đá</h5>
+                        <p class="card-text text-muted small">Cung đường mòn khám phá đỉnh núi cao.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 7 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 7">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Ánh nắng rừng già</h5>
+                        <p class="card-text text-muted small">Vẻ đẹp tĩnh lặng giữa lòng thiên nhiên hoang sơ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 8 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm gallery-card">
+                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=600&auto=format&fit=crop" class="card-img-top img-fluid gallery-img" alt="Cảnh thiên nhiên 8">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 fw-bold">Đỉnh núi tuyết</h5>
+                        <p class="card-text text-muted small">Vùng non cao hùng vĩ chạm mây trời.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <!-- 4. Footer (Thông tin bản quyền) -->
-    <footer class="footer">
-        <p>© 2026 Bản quyền thuộc về Trang Web Hoạt Hình Trực Tuyến An Toàn Cho Trẻ Em.</p>
-        <p>Cam kết 100% nội dung lành mạnh, chuẩn HD - Không quảng cáo độc hại.</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0 small">&copy; 2026 Bootstrap Gallery - Bài tập thực hành lưới RWD</p>
     </footer>
 
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
