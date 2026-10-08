@@ -9,43 +9,43 @@
 <body>
 
     <header>
-        <h1>Header (Tiêu đề trang)</h1>
+        <h1>Tiêu đề trang Web (Header)</h1>
     </header>
 
     <nav>
         <ul>
             <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Tin tức</a></li>
-            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a></li>
             <li><a href="#">Liên hệ</a></li>
         </ul>
     </nav>
 
-    <div class="container">
-        <section class="main-content">
-            <h2>Khu vực nội dung chính (Section)</h2>
+    <div class="main-container">
+        <section class="content-area">
+            <h2>Khu vực bài viết chính (Section)</h2>
             <article>
-                <h3>Bài viết 1 (Article)</h3>
-                <p>Nội dung chi tiết của bài viết thứ nhất mô tả về layout HTML5...</p>
+                <h3>Bài viết số 1 (Article)</h3>
+                <p>Nội dung chi tiết của bài viết thứ nhất sử dụng thẻ article trong HTML5.</p>
             </article>
             <article>
-                <h3>Bài viết 2 (Article)</h3>
-                <p>Nội dung chi tiết của bài viết thứ hai...</p>
+                <h3>Bài viết số 2 (Article)</h3>
+                <p>Nội dung chi tiết của bài viết thứ hai minh họa bố cục trang web chuẩn ngữ nghĩa.</p>
             </article>
         </section>
 
-        <aside class="sidebar">
-            <h3>Cột bên (Aside)</h3>
+        <aside class="sidebar-area">
+            <h3>Thanh bên (Aside)</h3>
             <ul>
-                <li>Bài viết xem nhiều</li>
-                <li>Quảng cáo / Banner</li>
+                <li>Tin nổi bật</li>
+                <li>Chuyên mục liên quan</li>
                 <li>Liên kết ngoài</li>
             </ul>
         </aside>
     </div>
 
     <footer>
-        <p>© 2026 Bản quyền thuộc về Layout HTML5 Demo</p>
+        <p>© 2026 - Bản quyền thuộc về Bố cục HTML5 & CSS</p>
     </footer>
 
 </body>
