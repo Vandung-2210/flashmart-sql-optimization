@@ -3,101 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook - Giao diện giản lược</title>
+    <title>Responsive Web Design Layout</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- FIXED HEADER -->
-    <header class="header">
-        <div class="header-left">
-            <span class="fb-logo">facebook</span>
-            <input type="text" class="search-input" placeholder="Tìm kiếm trên Facebook">
+    <div class="wrapper">
+        <!-- 1. Header -->
+        <div class="header">
+            <h1>Header</h1>
         </div>
-        <div class="header-center">
-            <button class="nav-btn active">Trang chủ</button>
-            <button class="nav-btn">Video</button>
-            <button class="nav-btn">Marketplace</button>
-            <button class="nav-btn">Nhóm</button>
-        </div>
-        <div class="header-right">
-            <div class="user-badge">Người dùng</div>
-        </div>
-    </header>
 
-    <!-- WRAPPER CHÍNH -->
-    <div class="main-wrapper">
-        
-        <!-- FIXED SIDEBAR TRÁI -->
-        <aside class="sidebar sidebar-left">
-            <ul class="nav-list">
-                <li class="nav-item">👤 Trang cá nhân</li>
-                <li class="nav-item">👥 Bạn bè</li>
-                <li class="nav-item">⏰ Kỷ niệm</li>
-                <li class="nav-item">🔖 Đã lưu</li>
-                <li class="nav-item">🚩 Trang</li>
-                <li class="nav-item">📅 Sự kiện</li>
-            </ul>
-        </aside>
+        <!-- 2. Menu Điều Hướng -->
+        <div class="navbar">
+            <a href="#">Trang chủ</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Dịch vụ</a>
+            <a href="#">Liên hệ</a>
+        </div>
 
-        <!-- NỘI DUNG CHÍNH (FEED CUỘN) -->
-        <main class="content-feed">
-            <div class="post-box">
-                <input type="text" placeholder="Bạn đang nghĩ gì thế?">
-                <div class="post-box-footer">
-                    <span>📹 Video trực tiếp</span>
-                    <span>🖼️ Ảnh/video</span>
-                    <span>😊 Cảm xúc</span>
-                </div>
+        <!-- 3. Khu vực thân trang (gồm Content và Sidebar) -->
+        <div class="main-body">
+            <!-- Cột nội dung chính -->
+            <div class="content">
+                <h2>Nội Dung Chính (Content)</h2>
+                <p>Bố cục trang web được thiết kế theo tiêu chuẩn Responsive Web Design (RWD) bằng cách kết hợp thuộc tính CSS Flexbox và Media Queries.</p>
+                <p>Khi hiển thị trên màn hình máy tính (Desktop/Laptop), khu vực thân trang sẽ chia thành 2 cột: Cột nội dung chính chiếm không gian lớn và Cột bên (Sidebar) chiếm không gian phụ.</p>
+                <p>Khi xem trên điện thoại hoặc thu nhỏ trình duyệt xuống dưới 768px, toàn bộ bố cục sẽ tự động chuyển đổi sang dạng 1 cột dọc giúp người dùng dễ dàng thao tác vuốt cuộn.</p>
             </div>
 
-            <article class="post-card">
-                <div class="post-author">
-                    <div class="avatar"></div>
-                    <div>
-                        <strong>Nguyễn Văn A</strong>
-                        <div class="post-meta">Vừa xong · 🌐 Công khai</div>
-                    </div>
-                </div>
-                <div class="post-text">
-                    Giao diện giản lược của trang chủ Facebook với Fixed Header và Sidebar đã hoàn thành đúng tiêu chuẩn bài tập!
-                </div>
-                <div class="post-buttons">
-                    <button>👍 Thích</button>
-                    <button>💬 Bình luận</button>
-                    <button>↗️ Chia sẻ</button>
-                </div>
-            </article>
+            <!-- Cột bên Sidebar -->
+            <div class="sidebar">
+                <h3>Thanh Bên (Sidebar)</h3>
+                <div class="sidebar-item">Mục nổi bật 1</div>
+                <div class="sidebar-item">Mục nổi bật 2</div>
+                <div class="sidebar-item">Quảng cáo / Banner</div>
+                <div class="sidebar-item">Thông tin bổ sung</div>
+            </div>
+        </div>
 
-            <article class="post-card">
-                <div class="post-author">
-                    <div class="avatar"></div>
-                    <div>
-                        <strong>Frontend Web</strong>
-                        <div class="post-meta">3 giờ trước · 🌐 Công khai</div>
-                    </div>
-                </div>
-                <div class="post-text">
-                    Thuộc tính position: fixed được áp dụng cho cả Header và Sidebar giúp giữ cố định khi cuộn nội dung bài viết ở giữa.
-                </div>
-                <div class="post-buttons">
-                    <button>👍 Thích</button>
-                    <button>💬 Bình luận</button>
-                    <button>↗️ Chia sẻ</button>
-                </div>
-            </article>
-        </main>
-
-        <!-- FIXED SIDEBAR PHẢI -->
-        <aside class="sidebar sidebar-right">
-            <h4 class="sidebar-title">Người liên hệ</h4>
-            <ul class="nav-list">
-                <li class="nav-item"><span class="online-indicator"></span> Trần Văn B</li>
-                <li class="nav-item"><span class="online-indicator"></span> Lê Thị C</li>
-                <li class="nav-item"><span class="online-indicator"></span> Hoàng Anh D</li>
-            </ul>
-        </aside>
-
+        <!-- 4. Footer -->
+        <div class="footer">
+            <p>Footer © 2026 - Thiết kế giao diện với RWD</p>
+        </div>
     </div>
 
 </body>
