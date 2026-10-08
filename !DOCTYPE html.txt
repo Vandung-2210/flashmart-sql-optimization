@@ -3,106 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giao diện giản lược Facebook</title>
+    <title>Facebook - Giao diện giản lược</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- 1. Fixed Header -->
-    <header class="navbar">
-        <div class="nav-left">
-            <span class="logo">facebook</span>
-            <input type="text" class="search-box" placeholder="Tìm kiếm trên Facebook...">
+    <!-- FIXED HEADER -->
+    <header class="header">
+        <div class="header-left">
+            <span class="fb-logo">facebook</span>
+            <input type="text" class="search-input" placeholder="Tìm kiếm trên Facebook">
         </div>
-        <div class="nav-center">
-            <button class="nav-tab active">Trang chủ</button>
-            <button class="nav-tab">Video</button>
-            <button class="nav-tab">Marketplace</button>
-            <button class="nav-tab">Nhóm</button>
+        <div class="header-center">
+            <button class="nav-btn active">Trang chủ</button>
+            <button class="nav-btn">Video</button>
+            <button class="nav-btn">Marketplace</button>
+            <button class="nav-btn">Nhóm</button>
         </div>
-        <div class="nav-right">
-            <div class="profile-badge">Người dùng</div>
+        <div class="header-right">
+            <div class="user-badge">Người dùng</div>
         </div>
     </header>
 
-    <!-- 2. Main Wrapper gồm 3 cột -->
-    <div class="main-container">
+    <!-- WRAPPER CHÍNH -->
+    <div class="main-wrapper">
         
-        <!-- Left Sidebar (Cố định danh mục bên trái) -->
+        <!-- FIXED SIDEBAR TRÁI -->
         <aside class="sidebar sidebar-left">
-            <ul class="menu-list">
-                <li class="menu-item active">👤 Trang cá nhân</li>
-                <li class="menu-item">👥 Bạn bè</li>
-                <li class="menu-item">⏰ Kỷ niệm</li>
-                <li class="menu-item">🔖 Đã lưu</li>
-                <li class="menu-item">🚩 Trang</li>
-                <li class="menu-item">📅 Sự kiện</li>
+            <ul class="nav-list">
+                <li class="nav-item">👤 Trang cá nhân</li>
+                <li class="nav-item">👥 Bạn bè</li>
+                <li class="nav-item">⏰ Kỷ niệm</li>
+                <li class="nav-item">🔖 Đã lưu</li>
+                <li class="nav-item">🚩 Trang</li>
+                <li class="nav-item">📅 Sự kiện</li>
             </ul>
         </aside>
 
-        <!-- Main Content (Bảng tin cuộn ở giữa) -->
-        <main class="feed-content">
-            <!-- Box đăng trạng thái -->
-            <div class="card create-post">
+        <!-- NỘI DUNG CHÍNH (FEED CUỘN) -->
+        <main class="content-feed">
+            <div class="post-box">
                 <input type="text" placeholder="Bạn đang nghĩ gì thế?">
-                <div class="post-actions">
+                <div class="post-box-footer">
                     <span>📹 Video trực tiếp</span>
                     <span>🖼️ Ảnh/video</span>
                     <span>😊 Cảm xúc</span>
                 </div>
             </div>
 
-            <!-- Bài viết 1 -->
-            <article class="card post">
-                <div class="post-header">
+            <article class="post-card">
+                <div class="post-author">
                     <div class="avatar"></div>
                     <div>
                         <strong>Nguyễn Văn A</strong>
-                        <div class="post-time">2 giờ trước · 🌐 Công khai</div>
+                        <div class="post-meta">Vừa xong · 🌐 Công khai</div>
                     </div>
                 </div>
-                <div class="post-body">
-                    Hôm nay hoàn thành bài tập tạo giao diện Facebook giản lược với fixed header và sidebar!
+                <div class="post-text">
+                    Giao diện giản lược của trang chủ Facebook với Fixed Header và Sidebar đã hoàn thành đúng tiêu chuẩn bài tập!
                 </div>
-                <div class="post-footer">
+                <div class="post-buttons">
                     <button>👍 Thích</button>
                     <button>💬 Bình luận</button>
                     <button>↗️ Chia sẻ</button>
                 </div>
             </article>
 
-            <!-- Bài viết 2 -->
-            <article class="card post">
-                <div class="post-header">
+            <article class="post-card">
+                <div class="post-author">
                     <div class="avatar"></div>
                     <div>
-                        <strong>Lập Trình Web</strong>
-                        <div class="post-time">5 giờ trước · 🌐 Công khai</div>
+                        <strong>Frontend Web</strong>
+                        <div class="post-meta">3 giờ trước · 🌐 Công khai</div>
                     </div>
                 </div>
-                <div class="post-body">
-                    Sử dụng thuộc tính <code>position: fixed</code> kết hợp với khoảng cách bù trừ <code>margin-top</code> hoặc <code>padding-top</code> là kỹ thuật cơ bản khi dựng thanh điều hướng cố định.
+                <div class="post-text">
+                    Thuộc tính position: fixed được áp dụng cho cả Header và Sidebar giúp giữ cố định khi cuộn nội dung bài viết ở giữa.
                 </div>
-                <div class="post-footer">
-                    <button>👍 Thích</button>
-                    <button>💬 Bình luận</button>
-                    <button>↗️ Chia sẻ</button>
-                </div>
-            </article>
-
-            <!-- Bài viết 3 -->
-            <article class="card post">
-                <div class="post-header">
-                    <div class="avatar"></div>
-                    <div>
-                        <strong>Frontend Developer</strong>
-                        <div class="post-time">1 ngày trước · 🌐 Công khai</div>
-                    </div>
-                </div>
-                <div class="post-body">
-                    Bố cục 3 cột kinh điển của các trang mạng xã hội: Sidebar trái chứa menu điều hướng, phần trung tâm hiển thị feed cuộn vô tận, Sidebar phải hiển thị danh bạ và tin nhắn nhanh.
-                </div>
-                <div class="post-footer">
+                <div class="post-buttons">
                     <button>👍 Thích</button>
                     <button>💬 Bình luận</button>
                     <button>↗️ Chia sẻ</button>
@@ -110,14 +88,13 @@
             </article>
         </main>
 
-        <!-- Right Sidebar (Cột danh bạ/tin nhắn bên phải) -->
+        <!-- FIXED SIDEBAR PHẢI -->
         <aside class="sidebar sidebar-right">
-            <h3>Người liên hệ</h3>
-            <ul class="contact-list">
-                <li class="contact-item"><span class="status-dot"></span> Trần Thị B</li>
-                <li class="contact-item"><span class="status-dot"></span> Lê Văn C</li>
-                <li class="contact-item"><span class="status-dot"></span> Hoàng Minh D</li>
-                <li class="contact-item"><span class="status-dot"></span> Phạm Thanh E</li>
+            <h4 class="sidebar-title">Người liên hệ</h4>
+            <ul class="nav-list">
+                <li class="nav-item"><span class="online-indicator"></span> Trần Văn B</li>
+                <li class="nav-item"><span class="online-indicator"></span> Lê Thị C</li>
+                <li class="nav-item"><span class="online-indicator"></span> Hoàng Anh D</li>
             </ul>
         </aside>
 
