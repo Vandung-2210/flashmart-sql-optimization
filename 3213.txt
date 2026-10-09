@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativeChronicle - Chi tiết bài viết</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* =========================================================
+           1. AUTHOR INFO (FLEXBOX thuần kết hợp Bootstrap Utilities)
+           ========================================================= */
+        .author-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .author-profile {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: #ced4da;
+            flex-shrink: 0;
+        }
+
+        /* =========================================================
+           2. MOSAIC GALLERY (CSS GRID - Xóa sổ position absolute)
+           ========================================================= */
+        .mosaic-gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 190px 190px;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            border-radius: 8px;
+            color: #333;
+        }
+
+        /* Ảnh chính chiếm 2 hàng của cột bên trái */
+        .photo-main {
+            grid-row: span 2;
+            background: #ffb3b3;
+            min-height: 250px;
+        }
+
+        .photo-sub-1 {
+            background: #b3d9ff;
+        }
+
+        .photo-sub-2 {
+            background: #b3ffb3;
+        }
+
+        /* Responsive cho Mobile (< 768px): gập thành 1 cột */
+        @media (max-width: 767.98px) {
+            .mosaic-gallery {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .photo-main {
+                grid-row: auto;
+                height: 240px;
+            }
+
+            .photo-sub-1,
+            .photo-sub-2 {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-dark py-4">
+
+    <div class="container bg-white p-4 p-md-5 rounded shadow-sm">
+        
+        <!-- VÙNG 1: AUTHOR INFO (Dùng Flexbox để căn giữa theo chiều dọc) -->
+        <header class="author-section">
+            <div class="author-profile">
+                <div class="author-avatar" aria-label="Avatar"></div>
+                <div>
+                    <h5 class="mb-0 fw-bold">Jane Doe</h5>
+                    <small class="text-muted">Published on Oct 25, 2026 • 5 min read</small>
+                </div>
+            </div>
+            
+            <div class="share-buttons d-flex gap-2">
+                <button type="button" class="btn btn-outline-primary btn-sm px-3">Share Facebook</button>
+                <button type="button" class="btn btn-outline-info btn-sm px-3">Tweet</button>
+            </div>
+        </header>
+
+        <!-- VÙNG 2: MOSAIC GALLERY (Dùng CSS Grid 2D) -->
+        <section class="mosaic-gallery">
+            <div class="gallery-item photo-main">Main Photo (Featured)</div>
+            <div class="gallery-item photo-sub-1">Sub Photo 1</div>
+            <div class="gallery-item photo-sub-2">Sub Photo 2</div>
+        </section>
+
+        <!-- NỘI DUNG BÀI VIẾT (Không còn bị đè lấn do chiều cao tự co giãn) -->
+        <article class="article-body mb-5">
+            <h2 class="h4 fw-bold mb-3">Tái Cấu Trúc Giao Diện Hiện Đại Cho Tạp Chí Nghệ Thuật</h2>
+            <p class="text-secondary leading-relaxed">
+                Nhờ việc loại bỏ <code>position: absolute</code> ở thư viện ảnh phía trên, phần tử cha giờ đây tự động tính toán chính xác chiều cao theo nội dung thực tế (flow content). Văn bản này luôn tự động lùi xuống vị trí an toàn, chấm dứt hoàn toàn hiện tượng chồng chéo nội dung trên các thiết bị di động.
+            </p>
+        </article>
+
+        <!-- VÙNG 3: RECOMMENDED ARTICLES (Bootstrap 5 Grid System) -->
+        <section class="recommended-section pt-3 border-top">
+            <h3 class="h5 fw-bold mb-4">Recommended Articles</h3>
+            <div class="row g-3">
+                <!-- Mobile: 1 cột (col-12) | Tablet: 2 cột (col-md-6) | Desktop: 4 cột (col-lg-3) -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 bg-light p-3">
+                        <h6 class="fw-bold mb-2">Typography Trends 2026</h6>
+                        <p class="small text-muted mb-0">Khám phá các quy chuẩn sắp đặt chữ nghệ thuật đương đại.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 bg-light p-3">
+                        <h6 class="fw-bold mb-2">Color Theory in UI</h6>
+                        <p class="small text-muted mb-0">Ứng dụng màu sắc tương phản giúp giữ chân độc giả lâu hơn.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 bg-light p-3">
+                        <h6 class="fw-bold mb-2">Minimalist Layouts</h6>
+                        <p class="small text-muted mb-0">Nghệ thuật sử dụng khoảng trắng (negative space) tinh tế.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 bg-light p-3">
+                        <h6 class="fw-bold mb-2">Future of Digital Arts</h6>
+                        <p class="small text-muted mb-0">Công nghệ tái định hình trải nghiệm đọc báo trực tuyến.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
